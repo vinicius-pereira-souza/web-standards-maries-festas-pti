@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
   font-size: 16px;
   background-image: linear-gradient(to bottom, #ffffff, #f0f3f5);
-  height: 2000px;
+  color: #353e4c;
 }
 
 header {
@@ -37,9 +37,11 @@ h2::before {
   margin-bottom: 50px;
 }
 
-#introducao {
-  min-height: 100vh;
+img {
+  display: block;
+  max-width: 100%;
 }
+
 .hero-banner {
   background: linear-gradient(#000020b8, #000020b8),
     url("../assets/images/banner-image-background.png") no-repeat center center /
@@ -48,17 +50,13 @@ h2::before {
   padding-bottom: 90px;
 }
 
-.container-center {
-  max-width: 962px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
 .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 32px 0;
+  max-width: 979px;
+  margin: 0 auto;
 }
 
 .nav-links {
@@ -79,6 +77,12 @@ h2::before {
 
 .nav-links a:hover {
   color: #ff8833;
+}
+
+.introducao-content {
+  padding: 0 10px;
+  max-width: 979px;
+  margin: 0 auto;
 }
 
 .introducao-content > div h1 {
@@ -129,18 +133,95 @@ h2::before {
 }
 
 #sobre > div {
+  padding: 70px 10px;
+  max-width: 979px;
+  margin: 0 auto;
+}
+
+div > .sobre-container {
   display: flex;
   align-items: start;
+  justify-content: space-between;
   column-gap: 68px;
 }
 
-#sobre > div div {
-  max-width: 500px;
+div > .sobre-container div:nth-child(2) {
+  flex: 0 0 50%;
 }
 
 #sobre p {
-  color: #353e4c;
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 15px;
 }
+
+#servicos > div {
+  padding: 0 10px 70px 10px;
+  max-width: 979px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#servicos h2::before {
+  margin-left: auto;
+}
+
+.servicos-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 30px;
+  margin-top: 47px;
+  text-align: left;
+}
+
+.servicos-container div:nth-child(1) {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 46px;
+}
+
+.servicos-container div:nth-child(2) li:not(:last-child) {
+  margin-bottom: 28px;
+}
+
+.servicos-container div:nth-child(2) li span {
+  color: #ff8833;
+  font-weight: bold;
+}
+
+#vantagens > div {
+  padding: 0 10px 70px 10px;
+  max-width: 979px;
+  margin: 0 auto;
+}
+
+#vantagens p {
+  text-align: center;
+  line-height: 24px;
+  margin-bottom: 28px;
+}
+
+#vantagens ul li:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+#vantagens li span {
+  color: #ff8833;
+  font-weight: bold;
+}
+
+.banner-color-background {
+}
+/*
+footer {
+  background-color: #051620;
+  padding: 43px 0;
+  color: #4b6879;
+  border-top: 1px solid #4b6879;
+}
+
+.banner-color-background {
+  background-color: #051620;
+} */
