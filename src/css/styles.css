@@ -520,61 +520,44 @@ footer div {
   }
 
   #servicos > div {
-    padding: 0 30px 70px 30px;
-  }
-
-  #servicos h2::before {
-    margin-left: auto;
+    padding: 0 30px 47px 30px;
   }
 
   .servicos-container {
-    display: flex;
-    align-items: center;
+    flex-direction: column-reverse;
     justify-content: space-between;
-    column-gap: 30px;
-    margin-top: 47px;
-    text-align: left;
+    row-gap: 27px;
+    margin-top: 13px;
   }
 
   .servicos-container div:nth-child(1) {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 46px;
+    gap: 30px;
+  }
+
+  .servicos-container div:nth-child(1) img {
+    width: 45%;
   }
 
   .servicos-container div:nth-child(2) li:not(:last-child) {
-    margin-bottom: 28px;
+    margin-bottom: 10px;
   }
 
-  .servicos-container div:nth-child(2) li span {
-    color: #ff8833;
-    font-weight: bold;
-  }
+  /* ARRUMAR ISSO */
 
   #vantagens > div {
-    padding: 0 10px 70px 10px;
-    max-width: 979px;
-    margin: 0 auto;
+    padding: 0 30px 47px 30px;
   }
 
   #vantagens p {
-    text-align: center;
     line-height: 24px;
-    margin-bottom: 28px;
+    margin-bottom: 10px;
   }
 
   #vantagens ul li:not(:last-of-type) {
-    margin-bottom: 20px;
-  }
-
-  #vantagens li span {
-    color: #ff8833;
-    font-weight: bold;
-  }
-
-  .banner-color-background {
-    background-color: #344256;
+    margin-bottom: 10px;
   }
 
   #contato {
