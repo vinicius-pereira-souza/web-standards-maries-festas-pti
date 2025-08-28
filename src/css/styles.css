@@ -431,4 +431,20 @@ footer div {
   #vantagens ul li:not(:last-of-type) {
     margin-bottom: 24px;
   }
+
+  #contato > div {
+    max-width: 667px;
+  }
+
+  .contato-container > div:nth-child(1) {
+    padding-right: 5%;
+  }
+
+  .contato-container > div:nth-child(2) {
+    padding-left: 5%;
+  }
+
+  footer div {
+    max-width: 667px;
+  }
 }
