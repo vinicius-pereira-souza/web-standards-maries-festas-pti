@@ -399,4 +399,36 @@ footer div {
   div > .sobre-container div:nth-child(2) {
     display: none;
   }
+
+  #servicos > div {
+    padding: 0 10px 60px 10px;
+    max-width: 667px;
+  }
+
+  .servicos-container {
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    margin-top: 24px;
+  }
+
+  .servicos-container div:nth-child(1) {
+    /* PRECISO ARRUMAR ISSO */
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+
+  #vantagens > div {
+    max-width: 667px;
+  }
+
+  #vantagens p {
+    margin-bottom: 24px;
+  }
+
+  #vantagens ul li:not(:last-of-type) {
+    margin-bottom: 24px;
+  }
 }
