@@ -386,4 +386,17 @@ footer div {
     font-size: 14px;
     display: block;
   }
+
+  #sobre > div {
+    padding: 60px 10px;
+    max-width: 667px;
+  }
+
+  div > .sobre-container {
+    display: block;
+  }
+
+  div > .sobre-container div:nth-child(2) {
+    display: none;
+  }
 }
