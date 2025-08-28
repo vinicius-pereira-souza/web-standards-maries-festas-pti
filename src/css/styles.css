@@ -448,3 +448,251 @@ footer div {
     max-width: 667px;
   }
 }
+
+@media (max-width: 468px) {
+  header {
+    padding: 0 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 13px;
+  }
+
+  h2::before {
+    width: 83px;
+    height: 6px;
+    margin-bottom: 28px;
+  }
+
+  .hero-banner {
+    padding-bottom: 87px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links a {
+    color: #f1f1f1;
+    text-decoration: none;
+    transition: 0.3s;
+    padding: 10px;
+  }
+
+  .introducao-content {
+    padding: 0 30px;
+  }
+
+  .introducao-content > div h1 {
+    max-width: 311px;
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 22px;
+  }
+
+  .introducao-content > div h1::before {
+    width: 88px;
+    height: 6px;
+    margin-bottom: 25px;
+  }
+
+  .introducao-content > div p {
+    margin-bottom: 25px;
+  }
+
+  .introducao-content > div a[type="button"],
+  form button[type="submit"] {
+    display: block;
+    max-width: 100%;
+  }
+
+  #sobre > div {
+    padding: 47px 30px;
+  }
+
+  div > .sobre-container div:nth-child(2) {
+    display: none;
+  }
+
+  #sobre p {
+    margin-bottom: 10px;
+  }
+
+  #servicos > div {
+    padding: 0 30px 70px 30px;
+  }
+
+  #servicos h2::before {
+    margin-left: auto;
+  }
+
+  .servicos-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 30px;
+    margin-top: 47px;
+    text-align: left;
+  }
+
+  .servicos-container div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 46px;
+  }
+
+  .servicos-container div:nth-child(2) li:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  .servicos-container div:nth-child(2) li span {
+    color: #ff8833;
+    font-weight: bold;
+  }
+
+  #vantagens > div {
+    padding: 0 10px 70px 10px;
+    max-width: 979px;
+    margin: 0 auto;
+  }
+
+  #vantagens p {
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 28px;
+  }
+
+  #vantagens ul li:not(:last-of-type) {
+    margin-bottom: 20px;
+  }
+
+  #vantagens li span {
+    color: #ff8833;
+    font-weight: bold;
+  }
+
+  .banner-color-background {
+    background-color: #344256;
+  }
+
+  #contato {
+    background-color: #051620;
+    padding: 70px 10px;
+  }
+
+  #contato > div {
+    max-width: 979px;
+    margin: 0 auto;
+    color: #f2f2f2;
+  }
+
+  .contato-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .contato-container::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    background-color: #4b6879;
+  }
+
+  .contato-container > div:nth-child(1) {
+    flex: 0 0 50%;
+    padding-right: 10%;
+  }
+
+  .contato-container > div:nth-child(2) {
+    flex: 0 0 50%;
+    padding-left: 10%;
+  }
+
+  .contato-container > div:nth-child(2) div {
+    padding: 27px 0;
+  }
+
+  .contato-container > div:nth-child(2) div:nth-child(1) {
+    padding-top: 0;
+  }
+
+  .contato-container > div:nth-child(2) div:nth-child(2) {
+    border: 1px solid #4b6879;
+    border-left: transparent;
+    border-right: transparent;
+  }
+
+  .contato-container > div:nth-child(2) div:nth-child(3) {
+    padding-bottom: 0;
+  }
+
+  .contato-container > div:nth-child(2) div h4 {
+    margin-bottom: 5px;
+  }
+
+  .contato-container span {
+    display: block;
+    font-weight: 400;
+  }
+
+  #contato h2 {
+    color: #f2f2f2;
+  }
+
+  #contato > div h2::before {
+    margin-left: auto;
+  }
+
+  .contato-container label {
+    display: block;
+    font-weight: bold;
+  }
+
+  .contato-container input {
+    height: 50px;
+  }
+
+  .contato-container :is(input, textarea) {
+    background-color: #133245;
+    border-radius: 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    outline: none;
+    transition: all 0.1s;
+    margin: 3px 0 16px 0;
+    color: #f2f2f2;
+    resize: vertical;
+  }
+
+  .contato-container :is(input, textarea)::placeholder {
+    color: #4b6879;
+  }
+
+  .contato-container :is(input, textarea):focus {
+    border: 2px solid #051620;
+    box-shadow: 0 0 0 2px #ff8833;
+  }
+
+  footer {
+    border-top: 1px solid #4b6879;
+    background-color: #051620;
+    color: #4b6879;
+  }
+
+  footer div {
+    padding: 43px 0;
+    max-width: 979px;
+    margin: 0 auto;
+  }
+}
