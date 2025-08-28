@@ -114,7 +114,8 @@ img {
   margin-bottom: 50px;
 }
 
-.introducao-content > div a[type="button"] {
+.introducao-content > div a[type="button"],
+form button[type="submit"] {
   max-width: max-content;
   text-decoration: none;
   color: #f1f1f1;
@@ -122,7 +123,7 @@ img {
   background-color: #ff8833;
   border-radius: 10px;
   font-size: 16px;
-  padding: 20px;
+  padding: 15px 20px;
   border: none;
   cursor: pointer;
   transition: 0.3s;
@@ -213,15 +214,124 @@ div > .sobre-container div:nth-child(2) {
 }
 
 .banner-color-background {
-}
-/*
-footer {
-  background-color: #051620;
-  padding: 43px 0;
-  color: #4b6879;
-  border-top: 1px solid #4b6879;
+  background-color: #344256;
 }
 
-.banner-color-background {
+#contato {
   background-color: #051620;
-} */
+  padding: 70px 10px;
+}
+
+#contato > div {
+  max-width: 979px;
+  margin: 0 auto;
+  color: #f2f2f2;
+}
+
+.contato-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.contato-container::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: #4b6879;
+}
+
+.contato-container > div:nth-child(1) {
+  flex: 0 0 50%;
+  padding-right: 10%;
+}
+
+.contato-container > div:nth-child(2) {
+  flex: 0 0 50%;
+  padding-left: 10%;
+}
+
+.contato-container > div:nth-child(2) div {
+  padding: 27px 0;
+}
+
+.contato-container > div:nth-child(2) div:nth-child(1) {
+  padding-top: 0;
+}
+
+.contato-container > div:nth-child(2) div:nth-child(2) {
+  border: 1px solid #4b6879;
+  border-left: transparent;
+  border-right: transparent;
+}
+
+.contato-container > div:nth-child(2) div:nth-child(3) {
+  padding-bottom: 0;
+}
+
+.contato-container > div:nth-child(2) div h4 {
+  margin-bottom: 5px;
+}
+
+.contato-container span {
+  display: block;
+  font-weight: 400;
+}
+
+#contato h2 {
+  color: #f2f2f2;
+}
+
+#contato > div h2::before {
+  margin-left: auto;
+}
+
+.contato-container label {
+  display: block;
+  font-weight: bold;
+}
+
+.contato-container input {
+  height: 50px;
+}
+
+.contato-container :is(input, textarea) {
+  background-color: #133245;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  width: 100%;
+  padding: 20px;
+  outline: none;
+  transition: all 0.1s;
+  margin: 3px 0 16px 0;
+  color: #f2f2f2;
+  resize: vertical;
+}
+
+.contato-container :is(input, textarea)::placeholder {
+  color: #4b6879;
+}
+
+.contato-container :is(input, textarea):focus {
+  border: 2px solid #051620;
+  box-shadow: 0 0 0 2px #ff8833;
+}
+
+footer {
+  border-top: 1px solid #4b6879;
+  background-color: #051620;
+  color: #4b6879;
+}
+
+footer div {
+  padding: 43px 0;
+  max-width: 979px;
+  margin: 0 auto;
+}
