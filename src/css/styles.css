@@ -79,6 +79,57 @@ img {
   color: #ff8833;
 }
 
+.btn-hamburguer {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+}
+
+.btn-hamburguer span {
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: #f1f1f1;
+  transition: all 0.3s;
+  margin: 10px 0;
+}
+
+.btn-hamburguer::after,
+.btn-hamburguer::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 4px;
+  transition: all 0.3s;
+  background-color: #f1f1f1;
+}
+
+[data-hamburguer="open"] span {
+  background-color: transparent;
+}
+
+[data-hamburguer="open"]::after,
+[data-hamburguer="open"]::before {
+  position: absolute;
+  top: 50%;
+}
+
+[data-hamburguer="open"]::after {
+  transform: rotate(-43deg);
+}
+
+[data-hamburguer="open"]::before {
+  transform: rotate(43deg);
+}
+
 .introducao-content {
   padding: 0 10px;
   max-width: 979px;
@@ -140,8 +191,9 @@ form button[type="submit"] {
 }
 
 div > .sobre-container {
-  display: flex;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 1fr 325px;
+  align-items: center;
   justify-content: space-between;
   column-gap: 68px;
 }
@@ -177,10 +229,10 @@ div > .sobre-container div:nth-child(2) {
 }
 
 .servicos-container div:nth-child(1) {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1%;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 46px;
 }
 
 .servicos-container div:nth-child(2) li:not(:last-child) {
@@ -357,7 +409,11 @@ footer div {
   }
 
   .nav-links {
-    column-gap: 30px;
+    display: none;
+  }
+
+  .btn-hamburguer {
+    display: block;
   }
 
   .introducao-content {
@@ -412,12 +468,11 @@ footer div {
   }
 
   .servicos-container div:nth-child(1) {
-    /* PRECISO ARRUMAR ISSO */
     margin-top: 28px;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
     gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
   }
 
   #vantagens > div {
@@ -449,7 +504,7 @@ footer div {
   }
 }
 
-@media (max-width: 468px) {
+@media (max-width: 480px) {
   header {
     padding: 0 30px;
   }
@@ -478,6 +533,10 @@ footer div {
     text-decoration: none;
     transition: 0.3s;
     padding: 10px;
+  }
+
+  .btn-hamburguer {
+    display: block;
   }
 
   .introducao-content {
@@ -511,6 +570,12 @@ footer div {
     padding: 47px 30px;
   }
 
+  div > .sobre-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+
   div > .sobre-container div:nth-child(2) {
     display: none;
   }
@@ -531,21 +596,16 @@ footer div {
   }
 
   .servicos-container div:nth-child(1) {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-  }
-
-  .servicos-container div:nth-child(1) img {
-    width: 45%;
   }
 
   .servicos-container div:nth-child(2) li:not(:last-child) {
     margin-bottom: 10px;
   }
-
-  /* ARRUMAR ISSO */
 
   #vantagens > div {
     padding: 0 30px 47px 30px;
