@@ -19,13 +19,15 @@
         <div class="header-container">
           <img src="./src/assets/images/maries-logo.svg" alt="Logo da Maries Festas">
           <nav>
-            <ul class="nav-links">
-              <li><a href="#introducao">Inicio</a></li>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#vantagens">Vantagens</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
+            <div data-hamburguer="close">
+              <ul class="nav-links">
+                <li><a href="#introducao">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#vantagens">Vantagens</a></li>
+                <li><a href="#contato">Contato</a></li>
+              </ul>
+            </div>
             <button class="btn-hamburguer" data-hamburguer="close">
               <span></span>
             </button>
@@ -43,7 +45,7 @@
   </section>
   <main>
     <article>
-      <section id="sobre">
+      <section id="sobre" data-animation="left">
         <div>
           <h2>A Paixão por Trás de Cada Detalhe</h2>
           <div class="sobre-container">
@@ -56,7 +58,7 @@
           </div>
         </div>
       </section>
-      <section id="servicos">
+      <section id="servicos" data-animation="right">
         <div>
           <h2>Transformamos Todas as Ocasiões</h2>
           <p>Seja um grande casamento ou uma festa de aniversário íntima, temos a solução perfeita para você.</p>
@@ -79,7 +81,7 @@
           </div>
         </div>
       </section>
-      <section id="vantagens">
+      <section id="vantagens" data-animation="left">
         <div>
           <h2>Por que Escolher a Maries Festas?</h2>
           <p>Acreditamos que a mágica está nos detalhes. Por isso, oferecemos um serviço totalmente personalizado, transformando suas ideias em projetos únicos. Nossa maior recompensa é ver a sua alegria e a emoção dos seus convidados ao entrarem no ambiente que criamos com tanto cuidado.</p>
@@ -91,7 +93,7 @@
           </ul>
         </div>
       </section>
-      <section id="contato">
+      <section id="contato" data-animation="top">
         <div>
           <h2>Formulário de Contato</h2>
           <div class="contato-container">
@@ -115,18 +117,18 @@
             <div>
               <div>
                 <h4>Endereço</h4>
-                <span>Praia Mansa n°47</span>
+                <span>Rua Exemplo, nº 123</span>
                 <span>São Paulo-SP</span>
               </div>
               <div>
                 <h4>Email & Telefone</h4>
-                <span>contato@surdbot.com</span>
+                <span>contato@exemplo.com</span>
                 <span>11 99999-9999</span>
               </div>
               <div>
                 <h4>Horário</h4>
                 <span>De segunda à Sexa</span>
-                <span>das 09:00 às 19 :00</span>
+                <span>das 10:00 às 19:00</span>
               </div>
             </div>
           </div>
@@ -140,6 +142,7 @@
     </footer>
   </main>
 
+  <script type="module" src="./src/js/main.js"></script>
 </body>
 
 </html>

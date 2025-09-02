@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
-  z-index: 1;
 }
 
 html {
@@ -15,6 +14,7 @@ body {
   font-size: 16px;
   background-image: linear-gradient(to bottom, #ffffff, #f0f3f5);
   color: #353e4c;
+  overflow-x: hidden;
 }
 
 header {
@@ -40,6 +40,10 @@ h2::before {
 img {
   display: block;
   max-width: 100%;
+}
+
+[data-animation] {
+  opacity: 0;
 }
 
 .hero-banner {
@@ -386,6 +390,47 @@ footer div {
   padding: 43px 0;
   max-width: 979px;
   margin: 0 auto;
+}
+
+@keyframes slideToTop {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideToBottom {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slideToLeft {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slideToRight {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 768px) {
