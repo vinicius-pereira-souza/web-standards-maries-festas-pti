@@ -46,16 +46,25 @@ class NavHamburguer {
     });
   }
 
+  handleViewportDesktop(e) {
+    this.button.dataset.hamburguer == "close";
+    this.nav.dataset.hamburguer = "close";
+  }
+
   addEvent() {
     this.button.addEventListener("click", this.handlerNavClick);
     this.links.forEach((link) => {
       link.addEventListener("click", this.scrollToSection);
     });
+    window
+      .matchMedia("(max-width: 770px)")
+      .addEventListener("change", this.handleViewportDesktop);
   }
 
   binding() {
     this.handlerNavClick = this.handlerNavClick.bind(this);
     this.scrollToSection = this.scrollToSection.bind(this);
+    this.handleViewportDesktop = this.handleViewportDesktop.bind(this);
   }
 
   init() {
