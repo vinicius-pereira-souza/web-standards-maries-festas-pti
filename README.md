@@ -2,7 +2,7 @@
 
 Landing Page desenvolvida como atividade da disciplina **Web Standards (PTI - Produção Textual Individual)** do curso de Análise e Desenvolvimento de Sistemas - Senac EAD.
 
-🔗 [Acesse o projeto publicado](https://vinicius-pereira-souza.github.io/web-standards-maries-festas-pti/#contato)
+🔗 [Acesse o projeto publicado](https://web-standards-maries-festas-pti.vercel.app/)
 
 ---
 
