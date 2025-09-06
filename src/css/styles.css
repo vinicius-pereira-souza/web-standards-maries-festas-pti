@@ -43,6 +43,7 @@ img {
 }
 
 [data-animation] {
+  /* depois alterar */
   opacity: 0;
 }
 
