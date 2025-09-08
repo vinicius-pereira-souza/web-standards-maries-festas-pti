@@ -6,20 +6,19 @@ class NavHamburguer {
   }
 
   handlerNavClick(e) {
-    this.toggleNavCotainer();
+    this.button.dataset.hamburguer == "open"
+      ? this.navHamburguerDisable()
+      : this.navHamburguerActive();
   }
 
-  toggleNavCotainer() {
-    const button = this.button;
+  navHamburguerActive() {
+    this.button.dataset.hamburguer = "open";
+    this.nav.dataset.hamburguer = "open";
+  }
 
-    button.dataset.hamburguer =
-      button.dataset.hamburguer == "close" ? "open" : "close";
-
-    if (button.dataset.hamburguer == "open") {
-      this.nav.dataset.hamburguer = "open";
-    } else if (button.dataset.hamburguer == "close") {
-      this.nav.dataset.hamburguer = "close";
-    }
+  navHamburguerDisable() {
+    this.button.dataset.hamburguer = "close";
+    this.nav.dataset.hamburguer = "close";
   }
 
   scrollToSection(e) {
@@ -39,7 +38,8 @@ class NavHamburguer {
       return;
     }
 
-    this.toggleNavCotainer();
+    this.navHamburguerDisable();
+
     window.scrollBy({
       top,
       behavior: "smooth",
@@ -47,8 +47,12 @@ class NavHamburguer {
   }
 
   handleViewportDesktop(e) {
-    this.button.dataset.hamburguer == "close";
-    this.nav.dataset.hamburguer = "close";
+    if (
+      !window.matchMedia("(max-width: 768px)").matches &&
+      this.button.dataset.hamburguer === "open"
+    ) {
+      this.navHamburguerDisable();
+    }
   }
 
   addEvent() {
